@@ -10,6 +10,6 @@ class Screen13 extends StatefulWidget {
 class _Screen13State extends State<Screen13> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(backgroundColor: Colors.red,);
   }
 }
