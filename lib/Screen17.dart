@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './Screen18.dart';
+
 
 class Screen17 extends StatefulWidget {
   const Screen17({Key? key}) : super(key: key);
@@ -15,10 +17,25 @@ class _Screen17State extends State<Screen17> {
         child: Scaffold(
           backgroundColor: Color(0xff20A090),
           appBar: AppBar(
-            title: TabBar(tabs: [
-              Tab(icon: Icon(Icons.flight)),
-              Tab(icon: Icon(Icons.directions_transit)),
-            ]),
+            title: Container(
+              decoration: BoxDecoration(
+                  color: Color(0xff0BEBA7),
+                  borderRadius: BorderRadius.circular(20)),
+              child: TabBar(
+                labelColor: Colors.red,
+                unselectedLabelColor: Colors.white,
+                tabs: [
+                  Tab(
+                      icon: Text(
+                    "Random",
+                  )),
+                  Tab(icon: Text("Oncam")),
+                ],
+                indicator: BoxDecoration(
+                    color: Color(0xffFFFFFF),
+                    borderRadius: BorderRadius.circular(20)),
+              ),
+            ),
             elevation: 0,
             leading: Icon(
               Icons.person,
@@ -78,31 +95,61 @@ class _Screen17State extends State<Screen17> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 127),
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            "assets/u7.png",
-                            width: 36.92307662963867,
-                            height: 36,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Text(
-                                "Female",
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w500,
-                                )
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (_) => Screen18()));
+                        },
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/u7.png",
+                              width: 36.92307662963867,
+                              height: 36,
                             ),
-                          )
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Text("Female",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w500,
+                                  )),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
                 ),
               ),
               Container(
-                color: Colors.green,
+                color: Color(0xff20A090),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 112,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 28, right: 28),
+                      child: Image.asset(
+                        "assets/u8.png",
+                        width: 334,
+                        height: 334,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 23),
+                      child: Text("Searching for new friends......",
+                          style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white)),
+                    )
+                  ],
+                ),
               )
             ],
           ),
