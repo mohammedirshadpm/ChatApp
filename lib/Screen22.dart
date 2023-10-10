@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Screen23.dart';
 
 class Screen22 extends StatefulWidget {
   const Screen22({Key? key}) : super(key: key);
@@ -248,70 +249,78 @@ class _Screen22State extends State<Screen22> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 24),
-                child: Stack(
-                  children: [
-                    Image.asset(
-                      "assets/x.png",
-                      width: 52,
-                      height: 52,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 42),
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/x1.png",
-                            width: 52,
-                            height: 52,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 42),
-                            child: Stack(
-                              children: [
-                                Image.asset(
-                                  "assets/x2.png",
-                                  width: 52,
-                                  height: 52,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 42),
-                                  child: Stack(
-                                    children: [
-                                      Image.asset(
-                                        "assets/x3.png",
-                                        width: 52,
-                                        height: 52,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 42),
-                                        child: Stack(
-                                          children: [
-                                            Image.asset(
-                                              "assets/x4.png",
-                                              width: 52,
-                                              height: 52,
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(left: 42),
-                                              child: Image.asset(
-                                                "assets/x5.png",
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (_) => Screen23()));
+                  },
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        "assets/x.png",
+                        width: 52,
+                        height: 52,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 42),
+                        child: Stack(
+                          children: [
+                            Image.asset(
+                              "assets/x1.png",
+                              width: 52,
+                              height: 52,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 42),
+                              child: Stack(
+                                children: [
+                                  Image.asset(
+                                    "assets/x2.png",
+                                    width: 52,
+                                    height: 52,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 42),
+                                    child: Stack(
+                                      children: [
+                                        Image.asset(
+                                          "assets/x3.png",
+                                          width: 52,
+                                          height: 52,
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 42),
+                                          child: Stack(
+                                            children: [
+                                              Image.asset(
+                                                "assets/x4.png",
                                                 width: 52,
                                                 height: 52,
                                               ),
-                                            ),
-                                          ],
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 42),
+                                                child: Image.asset(
+                                                  "assets/x5.png",
+                                                  width: 52,
+                                                  height: 52,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -176,14 +176,17 @@ class _Screen3State extends State<Screen3> {
                     ),
                   ),
                   child: Center(
-                    child: Text(
-                      'Log in',
-                      style: TextStyle(
-                        color: Color(0xFF797C7B),
-                        fontSize: 16,
-                        fontFamily: 'Caros',
-                        fontWeight: FontWeight.w600,
-                        height: 0.06,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 13),
+                      child: Text(
+                        'Log in',
+                        style: TextStyle(
+                          color: Color(0xFF797C7B),
+                          fontSize: 16,
+                          fontFamily: 'Caros',
+                          fontWeight: FontWeight.w600,
+                          height: 0.06,
+                        ),
                       ),
                     ),
                   ),

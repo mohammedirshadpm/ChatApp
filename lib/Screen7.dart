@@ -15,7 +15,7 @@ class _Screen7State extends State<Screen7> {
       appBar: AppBar(
         centerTitle: true,
         leading: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(left: 20),
           child: Image.asset('assets/f.png'),
         ),
         backgroundColor: Color(0xff20A090),
@@ -27,10 +27,13 @@ class _Screen7State extends State<Screen7> {
               fontWeight: FontWeight.w500,
             )),
         actions: [
-          Image.asset(
-            "assets/f1.png",
-            width: 44,
-            height: 44,
+          Padding(
+            padding: const EdgeInsets.only(right: 24),
+            child: Image.asset(
+              "assets/f1.png",
+              width: 44,
+              height: 44,
+            ),
           )
         ],
       ),

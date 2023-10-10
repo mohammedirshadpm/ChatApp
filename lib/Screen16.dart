@@ -86,7 +86,7 @@ class _Screen16State extends State<Screen16> {
                           height: 67,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 18, top: 11),
+                          padding: const EdgeInsets.only(left: 15, top: 11),
                           child: Column(
                             children: [
                               Image.asset(
