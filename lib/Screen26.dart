@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Screen27.dart';
 
 class Screen26 extends StatefulWidget {
   const Screen26({super.key});
@@ -53,8 +54,8 @@ class _Screen26State extends State<Screen26> {
                 ),
                 color: Colors.white),
             child: SingleChildScrollView(
-
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
                     height: 41,
@@ -70,25 +71,22 @@ class _Screen26State extends State<Screen26> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                  "Nazrul Islam",
+                              Text("Nazrul Islam",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
-                                  )
-                              ),
+                                  )),
                               SizedBox(
                                 height: 6,
                               ),
-                              Text(
-                                  "Never give up 💪",
+                              Text("Never give up 💪",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
-                                  )
-                              )
+                                  ))
                             ],
                           ),
                         ),
@@ -117,40 +115,41 @@ class _Screen26State extends State<Screen26> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 24),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          "assets/1.png",
-                          width: 44,
-                          height: 44,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                  "Account",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  )
-                              ),
-                              SizedBox(
-                                height: 6,
-                              ),
-                              Text(
-                                  "Privacy, security, change number",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                  )
-                              )
-                              ],
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => Screen27()));
+                      },
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/1.png",
+                            width: 44,
+                            height: 44,
                           ),
-                        )
-
-
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Account",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    )),
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                Text("Privacy, security, change number",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                    ))
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -167,25 +166,22 @@ class _Screen26State extends State<Screen26> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                  "Chat",
+                              Text("Chat",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                  )
-                              ),
+                                  )),
                               SizedBox(
                                 height: 6,
                               ),
-                              Text(
-                                  "Chat history,theme,wallpapers",
+                              Text("Chat history,theme,wallpapers",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
-                                  )
-                              )
+                                  ))
                             ],
                           ),
                         )
@@ -206,25 +202,22 @@ class _Screen26State extends State<Screen26> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                  "Notifications",
+                              Text("Notifications",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                  )
-                              ),
+                                  )),
                               SizedBox(
                                 height: 6,
                               ),
-                              Text(
-                                  "Messages, group and others",
+                              Text("Messages, group and others",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
-                                  )
-                              )
+                                  ))
                             ],
                           ),
                         )
@@ -243,30 +236,28 @@ class _Screen26State extends State<Screen26> {
                           width: 44,
                           height: 44,
                         ),
-                        Column(crossAxisAlignment: CrossAxisAlignment.start,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(left: 12),
-                              child: Text(
-                                  "Help",
+                              child: Text("Help",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                  )
-                              ),
+                                  )),
                             ),
                             SizedBox(
                               height: 6,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 14),
-                              child: Text(
-                                  "Help center,contact us, privacy policy",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                  )
-                              ),
+                              child:
+                                  Text("Help center,contact us, privacy policy",
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                      )),
                             )
                           ],
                         )
@@ -287,25 +278,22 @@ class _Screen26State extends State<Screen26> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                  "Storage and data",
+                              Text("Storage and data",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
-                                  )
-                              ),
+                                  )),
                               SizedBox(
                                 height: 6,
                               ),
-                              Text(
-                                  "Network usage, stogare usage",
+                              Text("Network usage, stogare usage",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
-                                  )
-                              )
+                                  ))
                             ],
                           ),
                         )
@@ -326,13 +314,11 @@ class _Screen26State extends State<Screen26> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),
-                          child: Text(
-                              "Invite a friend",
+                          child: Text("Invite a friend",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
-                              )
-                          ),
+                              )),
                         )
                       ],
                     ),
@@ -343,7 +329,7 @@ class _Screen26State extends State<Screen26> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(0),
                           color: Colors.white),
-                      child:Row(
+                      child: Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 61),
@@ -378,8 +364,7 @@ class _Screen26State extends State<Screen26> {
                             ),
                           ),
                         ],
-                      )
-                  )
+                      ))
                 ],
               ),
             ),
