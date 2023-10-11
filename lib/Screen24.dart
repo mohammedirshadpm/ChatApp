@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Screen25.dart';
 
 class Screen24 extends StatefulWidget {
   const Screen24({Key? key}) : super(key: key);
@@ -21,10 +22,16 @@ class _Screen24State extends State<Screen24> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 24),
-                child: Image.asset(
-                  "assets/x6.png",
-                  width: 44,
-                  height: 44,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (_) => Screen25()));
+                  },
+                  child: Image.asset(
+                    "assets/x6.png",
+                    width: 44,
+                    height: 44,
+                  ),
                 ),
               ),
               Padding(
@@ -309,20 +316,19 @@ class _Screen24State extends State<Screen24> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("sheik Sadi ",
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500,
                                   )),
-                              Text(
-                                  "Life is beautiful 👌",
+                              Text("Life is beautiful 👌",
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
-                                  )
-                              )
+                                  ))
                             ],
                           ),
                         )
@@ -335,7 +341,7 @@ class _Screen24State extends State<Screen24> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(0),
                           color: Colors.white),
-                      child:Row(
+                      child: Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 61),
@@ -370,8 +376,7 @@ class _Screen24State extends State<Screen24> {
                             ),
                           )
                         ],
-                      )
-                  )
+                      ))
                 ],
               ),
             ),
