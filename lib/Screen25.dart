@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Screen26.dart';
 
 class Screen25 extends StatefulWidget {
   const Screen25({Key? key}) : super(key: key);
@@ -67,35 +68,41 @@ class _Screen25State extends State<Screen25> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 24),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      "assets/m.png",
-                      width: 52,
-                      height: 52,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Adil Adnan",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
-                              )),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Text("Be your own hero 💪",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                              ))
-                        ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (_) => Screen26()));
+                  },
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/m.png",
+                        width: 52,
+                        height: 52,
                       ),
-                    )
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Adil Adnan",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("Be your own hero 💪",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                ))
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
