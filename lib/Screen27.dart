@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './Screen28.dart';
+
 class Screen27 extends StatefulWidget {
   const Screen27({Key? key}) : super(key: key);
 
@@ -236,13 +238,19 @@ class _Screen27State extends State<Screen27> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 184),
-                          child: Text(
-                              "View All",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff20A090)
-                              )
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context)
+                                  .push(MaterialPageRoute(builder: (_) => Screen28()));
+                            },
+                            child: Text(
+                                "View All",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff20A090)
+                                )
+                            ),
                           ),
                         )
                       ],
