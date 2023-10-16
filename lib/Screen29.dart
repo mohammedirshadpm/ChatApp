@@ -13,12 +13,91 @@ List<String> img = [
   "assets/35b.png",
   "assets/36b.png",
   "assets/28.png",
-  "assets/26.png"
+  "assets/30a.png"
+];
+List<String> imgs = [
+  "assets/37.png",
+  "assets/38.png",
+  "assets/39.png",
+  "assets/40.png",
+  "assets/41.png",
+  "assets/42.png",
+  "assets/43.png",
+  "assets/44.png",
+  "assets/45.png",
+  "assets/46.png"
+];
+List<String> text = [
+  "boykaa.pubjii game",
+  "boykaa.full movie",
+  "boykaa.f2heeeee",
+  "boykaa.ttttt4443",
+  "boykaa55555555",
+  "boykaa.4444444",
+  "boykaa.full 3444",
+  "boykaa.ddddddd",
+  "boykaa.4444555",
+  "boykaa.5588888",
+];
+List<String> text1 = [
+  "555532 followers . 234 videos",
+  "555532 followers . 234 videos",
+  "555532 followers . 234 videos",
+  "555532 followers . 234 videos",
+  "3333532 followers . 234 videos",
+  "7777777 followers . 234 videos",
+  "999992 followers . 234 videos",
+  "6666666 followers . 234 videos",
+  "3333332 followers . 234 videos",
+  "555532 followers . 234 videos",
+];
+
+List<String> image = [
+  "assets/50.png",
+  "assets/51.png",
+  "assets/52.png",
+  "assets/50.png",
+  "assets/53.png",
+  "assets/54.png",
+  "assets/55.png",
+  "assets/54.png",
+  "assets/56.png",
+  "assets/50.png",
+  "assets/54.png",
+];
+List<String> text2 = [
+  "boykaa.pubjii game",
+  "boykaa.pubjii game",
+  "boykaa.f2heeeee",
+  "boykaa.ttttt4443",
+  "boykaa55555555",
+  "boykaa.4444444",
+  "boykaa.full 3444",
+  "boykaa.ddddddd",
+  "boykaa.4444555",
+  "boykaa.5588888",
+  "Boykaa4444444",
+];
+List<String> text3 = [
+  "01:00. 234k videos",
+  "01:00. 234k videos",
+  "01:00. 234k videos",
+  "01:00. 234k videos",
+  "02:00. 2634k videos",
+  "03:00. 2334k videos",
+  "03:00. 2334k videos",
+  "01:00. 2334k videos",
+  "04:00. 2334k videos",
+  "03:00. 23354k videos",
+  "02:00. 23234k videos",
 ];
 
 class _Screen29State extends State<Screen29> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    double itemHeight = 250;
+    double itemWidth = 200;
     return DefaultTabController(
         length: 6,
         child: Scaffold(
@@ -27,6 +106,7 @@ class _Screen29State extends State<Screen29> {
               preferredSize: Size.fromHeight(118), // here the desired height
               child: AppBar(
                 automaticallyImplyLeading: false,
+                elevation: 0,
                 bottom: TabBar(
                   isScrollable: true,
                   tabs: [
@@ -583,38 +663,270 @@ class _Screen29State extends State<Screen29> {
               //page2
               GridView.count(
                 crossAxisCount: 2,
-                crossAxisSpacing: 10.0,
-                mainAxisSpacing: 10.0,
+                childAspectRatio: (itemWidth / itemHeight),
                 shrinkWrap: true,
                 children: List.generate(
                   6,
                   (index) {
                     return Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage('img.png'),
-                            fit: BoxFit.cover,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
                           ),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                        ),
-                        child: Image.asset(
-                          img[index],
-                          width: 166,
-                          height: 171,
-                        ),
-                      ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Stack(
+                                children: [
+                                  SizedBox(
+                                    width: 166,
+                                    height: 171,
+                                    child: Image.asset(
+                                      img[index],
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 73, top: 76),
+                                    child: Image.asset(
+                                      "assets/29.png",
+                                      width: 20,
+                                      height: 19,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 8, top: 155),
+                                    child: Text("11/21/2022",
+                                        style: TextStyle(
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white)),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 9),
+                                child: Text("#fyp/dhhh/",
+                                    style: TextStyle(
+                                        fontSize: 9,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 9),
+                                child: Text("#viral video",
+                                    style: TextStyle(
+                                        fontSize: 9,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white)),
+                              ),
+                              SizedBox(
+                                height: 3,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 9),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/22.png",
+                                      width: 8,
+                                      height: 8,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5),
+                                      child: Text("fayzuu4532",
+                                          style: TextStyle(
+                                              fontSize: 6,
+                                              fontWeight: FontWeight.w500,
+                                              color: Color(0xffA59F9F))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 63),
+                                      child: Row(
+                                        children: [
+                                          Image.asset(
+                                            "assets/23.png",
+                                            width: 7,
+                                            height: 6,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 3),
+                                            child: Text("3.445k",
+                                                style: TextStyle(
+                                                    fontSize: 6,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: Color(0xffB2B0B0))),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          )),
                     );
                   },
                 ),
               ),
 
-              Container(),
-              Container(),
-              Container(),
+//page3
+
+              ListView.builder(
+                itemCount: 10,
+                itemBuilder: (ctx, index) {
+                  return Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 46,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 19),
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage: AssetImage(imgs[index]),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 12),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(text[index],
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white)),
+                                    Text("boykaa",
+                                        style: TextStyle(
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white)),
+                                    Text(text1[index],
+                                        style: TextStyle(
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white))
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 70),
+                                child: Container(
+                                    width: 79,
+                                    height: 18.72592544555664,
+                                    decoration:
+                                        BoxDecoration(color: Color(0xffef1e1e)),
+                                    child: Center(
+                                      child: Text("follow",
+                                          style: TextStyle(
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white)),
+                                    )),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+
+//page 4
+              ListView.builder(
+                  itemCount: 11,
+                  itemBuilder: (ctx, index) {
+                    return Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 45,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12),
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  image[index],
+                                  width: 50,
+                                  height: 48,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(text2[index],
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white)),
+                                      SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text("boykaa",
+                                          style: TextStyle(
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white)),
+                                      SizedBox(
+                                        height: 3,
+                                      ),
+                                      Text(text3[index],
+                                          style: TextStyle(
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white))
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                    padding: const EdgeInsets.only(left: 90),
+                                    child: Image.asset(
+                                      "assets/47.png",
+                                      width: 66,
+                                      height: 25,
+                                    ))
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+
+              //page5
+              ListView.builder(
+                  itemCount: 11,
+                  itemBuilder: (ctx, index) {
+                    return Container(
+                      child: Column(
+                        children: [],
+                      ),
+                    );
+                  }),
+
               Container(),
             ])));
   }
