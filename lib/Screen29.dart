@@ -91,7 +91,55 @@ List<String> text3 = [
   "03:00. 23354k videos",
   "02:00. 23234k videos",
 ];
+List<String> text4 = [
+  "Boykataa",
+  "boykaa.metal",
+  "boykaa.f2heeeee",
+  "boykaa.ttttt4443",
+  "boykaa55555555",
+  "boykaa.4444444",
+  "boykaa.full 3444",
+  "boykaa.ddddddd",
+  "boykaa.4444555",
+  "boykaa.5588888",
+  "Boykaa4444444",
+];
+List<String> text5 = [
+  "01:00. 234k videos",
+  "01:00. 234k videos",
+  "01:00. 234k videos",
+  "01:00. 2354k videos",
+  "02:00. 2634k videos",
+  "03:00. 2334k videos",
+  "03:00. 2334k videos",
+  "01:00. 2334k videos",
+  "04:00. 2334k videos",
+  "03:00. 23354k videos",
+  "02:00. 23234k videos",
+];
+List<String> text6 = [
+  "boykaafilm",
+  "boyka full farm",
+  "boyka44afilm",
+  "boykaaf44m",
+  "full movie",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
+  "boykaafilm",
 
+
+
+];
 class _Screen29State extends State<Screen29> {
   @override
   Widget build(BuildContext context) {
@@ -789,7 +837,7 @@ class _Screen29State extends State<Screen29> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 46,
+                          height: 8,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 19),
@@ -857,7 +905,7 @@ class _Screen29State extends State<Screen29> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 45,
+                            height: 5,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 12),
@@ -917,17 +965,106 @@ class _Screen29State extends State<Screen29> {
                   }),
 
               //page5
+
               ListView.builder(
                   itemCount: 11,
                   itemBuilder: (ctx, index) {
                     return Container(
                       child: Column(
-                        children: [],
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 31),
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  "assets/48b1.png",
+                                  width: 16,
+                                  height: 20,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 27),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(text4[index],
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white)),
+                                      SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text("boykaa",
+                                          style: TextStyle(
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white)),
+                                      SizedBox(
+                                        height: 3,
+                                      ),
+                                      Text(text5[index],
+                                          style: TextStyle(
+                                              fontSize: 9,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white))
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                        ],
                       ),
                     );
                   }),
 
-              Container(),
+              //page6
+              ListView.builder(
+                  itemCount: 18,
+                  itemBuilder: (ctx, index) {
+                    return Container(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 31),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  height: 36,
+                                ),
+                                Text("#",
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white
+                                    )),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: Text(
+                                      text6[index],
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white
+                                      )
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  })
             ])));
   }
 }
+
